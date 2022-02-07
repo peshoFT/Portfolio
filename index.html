@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Victor Koychev - Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;471&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;954&display=swap" rel="stylesheet">
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        font-family: 'Lora', serif;
+      }
+      * {
+        font-family: "Lora", serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #eee;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      
+      :root {
+      --grey: #a3a8b8;
+      --red: rgba(192, 24, 24, 0.822);
+    }
+    @media only screen and (max-width: 500px) {
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-pagination-bullet{
+        background: red;
+      } 
+      
+      #pc, .scroll-container, ul {
+        display: none;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: rgb(32, 33, 36);
+        color: white;
+        text-align: center;
+      }
+      #contactMe,
+      #myCV {
+        text-decoration: none;
+        color: var(--red);
+        margin: auto;
+      }
+      nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center; 
+        background: none; 
+        margin-top: 10px;
+      }
+      .underline {
+        background: linear-gradient(rgb(32, 33, 36, 0), rgb(32, 33, 36, 0)),
+          linear-gradient(to right, var(--red), var(--red), var(--red));
+        background-size: 100% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 200ms;
+      }
+      .underline:hover {
+        background-size: 0 2px, 100% 2px;
+      }
+      .victorKoychev {
+        text-align: center;
+      }
+
+      h1 {
+        color: var(--red);
+        font-size: 35px;
+      }
+      blockquote {
+        margin-left: 42.5px;
+        width: 80%;
+        font-size: 16px;
+        text-align: left;
+        font-family: Georgia, serif;
+        font-style: italic;
+        line-height: 1.2;
+        color: var(--grey);
+      }
+
+      
+      blockquote:before {
+        display: block;
+        margin-left: -34px;
+        margin-top: -12px;
+        content: "\201C";
+        font-size: 60px;
+        position: absolute;
+        color: #ff0000;
+      }
+      blockquote cite {
+        color: #999999;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+      }
+      blockquote cite:before {
+        content: "\2014 \2009";
+      }
+      .card {
+          box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+            5px 5px 15px rgba(0, 0, 0, 0.3),
+            -5px -5px 15px rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          transition: 0.5s;
+          text-align: center;
+          color: white;
+          margin: 20px auto;
+          width: 90%;
+          margin: auto;
+        }
+        .project.card {
+          height: 100%;
+          width: 40%;
+        }
+
+        
+        .card .box {
+          /* top: 20px;
+          left: 20px;
+          right: 220px;
+          bottom: 20px; */
+          background: #2a2b2f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          transition: 0.5s;
+          border-radius: 15px;
+        
+        }
+        .card .box:hover {
+          transform: translateY(-10px);
+        }
+
+        .card .box .content {
+          padding: 20px;
+          text-align: center;
+        }
+
+        .card .box .content a {
+          position: relative;
+          display: inline-block;
+          padding: 8px 20px;
+          background: var(--red);
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          transition: 0.5s;
+          width: 120px;
+        }
+        .card .box .content a:hover {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+          background: #fff;
+          color: var(--red);
+        }
+        .card img {
+          max-width: 50px;
+          margin: 0 auto;
+        }
+        .instagram:hover path {
+          fill: rgb(138, 58, 185);
+        }
+        .facebook:hover path {
+          fill: rgb(66, 103, 178);
+        }
+        .linkedin:hover path {
+          fill: rgb(0, 119, 181);
+        }
+        svg {
+          transform: scale(2.4);
+          fill: var(--red);
+          margin: 40px 20px;
+        }
+
+        .socials a {
+          text-decoration: none;
+        }
+        
+        .socials a:hover {
+          cursor: default;
+        }
+        .socials svg:hover {
+          cursor: pointer;
+        }
+        .contactMe div {
+          position: relative;
+          font-size: 20px;
+          color: var(--grey);
+        }
+        #mailto:hover {
+          text-decoration: underline;
+        }
+
+        #mailto {
+        background: linear-gradient(rgb(32, 33, 36, 0), rgb(32, 33, 36, 0)),
+          linear-gradient(to right, var(--red), var(--red), var(--red));
+        background-size: 100% 1.4px, 0 1.4px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+      }
+
+        #mailto {
+          color: var(--red);
+          text-decoration: none;
+        }
+        h3 {
+          font-size: 1.3rem;
+          color: #fff;
+          transition: 0.5s;
+          margin: 0px 0px 15px 0px;
+        }
+        .swiper {
+          height: 100%;
+          width: 100%;
+        }
+    }
+    @media only screen and (min-width: 500px) {
+      #mobile, .swiper {
+        display: none;
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgb(32, 33, 36);
+      }
+
+      .scroll-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      ul {
+        width: 150px;
+      }
+
+      .scroll-container section {
+        width: 100%;
+        height: 100%;
+      }
+
+      .dots {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+      }
+
+      .dots li a {
+        padding: 15px 4px;
+        display: block;
+      }
+      .dots li p {
+        position: relative;
+        left: 10px;
+        cursor: pointer;
+        color: var(--grey);
+      }
+
+      .dots li p:hover,
+      .dots li a:hover + p {
+        color: rgb(255, 255, 255);
+      }
+      .dots li a:before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: var(--grey);
+        border-radius: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .dots li a.active:before {
+        background-color: var(--red);
+        width: 16px;
+        height: 16px;
+        margin-top: -4px;
+        left: 0px;
+        transform: scale(1);
+      }
+      .dots li p {
+        font-size: 12px;
+        margin: -18px 27px;
+        width: 76.5px;
+      }
+
+      .dots li {
+        margin: 15px 0px 0px 0px;
+      }
+
+      .dots-right {
+        right: 10px;
+      }
+
+      .dots-left {
+        left: 10px;
+      }
+      section .directChild {
+        font-family: "Open Sans";
+        font-style: normal;
+        text-align: center;
+        position: relative;
+      }
+      a.active + p {
+        color: white;
+      }
+
+      span {
+        font-size: 4em;
+        font-style: normal;
+        color: #fff;
+      }
+      #pc {
+        position: relative;
+      }
+
+      .card {
+        position: relative;
+        max-width: 520px;
+        height: 440px;
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+          inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+          5px 5px 15px rgba(0, 0, 0, 0.3),
+          -5px -5px 15px rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        transition: 0.5s;
+        text-align: center;
+        color: white;
+        margin: 20px auto;
+      }
+      .project.card {
+        width: 35%;
+      }
+
+      .card .box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background: #2a2b2f;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .card .box:hover {
+        transform: translateY(-10px);
+      }
+      #mailto {
+        z-index: 1;
+        position: relative;
+      }
+
+      .card .box:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .card .box .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        color: #fff;
+        transition: 0.5s;
+        margin: 0px 0px 15px 0px;
+      }
+
+      .card .box .content a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        background: var(--red);
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+        width: 130px;
+      }
+      .card .box .content a:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        background: #fff;
+        color: var(--red);
+        font-weight: bold;
+      }
+      .card img {
+        max-width: 50px;
+        margin: 0 auto
+      }
+      .filter-red {
+        filter: invert(20%) sepia(92%) saturate(1999%) hue-rotate(342deg)
+          brightness(74%) contrast(109%);
+        padding: 20px 15px;
+      }
+      #pc {
+        z-index: 1;
+        width: 100%;
+      }
+      h1 {
+        color: var(--red);
+        font-size: 70px;
+        margin: 0;
+      }
+      .jobs .directChild {
+      }
+      .victorKoychev,
+      .jobs,
+      .projects {
+        text-align: center;
+      }
+      .victorKoychev {
+        text-align: center;
+      }
+      .victorKoychev h1 {
+      }
+      .projects h1 {
+      }
+      .projects .directChild {
+      }
+      #contactMe,
+      #myCV {
+        text-decoration: none;
+        color: var(--red);
+        float: right;
+      }
+
+      .underline {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .underline {
+        background: linear-gradient(rgb(32, 33, 36, 0), rgb(32, 33, 36, 0)),
+          linear-gradient(to right, var(--red), var(--red), var(--red));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+      }
+
+      .underline:hover {
+        background-size: 0 3px, 100% 3px;
+      }
+
+      .socials a:hover {
+        cursor: default;
+      }
+      .socials svg:hover {
+        cursor: pointer;
+      }
+      .contactMe div {
+        position: relative;
+        font-size: 20px;
+        color: var(--grey);
+      }
+      .socials {
+        position: relative;
+      }
+      section {
+        text-align: center;
+      }
+
+      .footer-basic {
+        background-color: rgb(33, 37, 41);
+        color: #4b4c4d;
+      }
+
+      .footer-basic ul a:hover {
+        opacity: 1;
+      }
+
+      .footer-basic .socials {
+        text-align: center;
+      }
+
+      .footer-basic .socials > a {
+        background: rgb(223, 223, 223);
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        margin: 0 8px;
+        color: inherit;
+        opacity: 0.75;
+      }
+      .footer-basic .socials > a:hover {
+        opacity: 0.9;
+      }
+
+      .instagram:hover path {
+        fill: rgb(138, 58, 185);
+      }
+      .facebook:hover path {
+        fill: rgb(66, 103, 178);
+      }
+      .linkedin:hover path {
+        fill: rgb(0, 119, 181);
+      }
+      svg {
+        transform: scale(3.6);
+        fill: var(--red);
+        margin: 50px;
+      }
+
+      .socials a {
+        text-decoration: none;
+      }
+
+      .footer-basic .copyright {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(223, 223, 223);
+        margin-bottom: 0;
+        opacity: 0.7;
+      }
+
+      #mailto:hover() {
+        text-decoration: underline;
+      }
+
+      #mailto {
+        color: var(--red);
+        text-decoration: none;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      #mailto {
+        background: linear-gradient(rgb(32, 33, 36, 0), rgb(32, 33, 36, 0)),
+          linear-gradient(to right, var(--red), var(--red), var(--red));
+        background-size: 100% 1.4px, 0 1.4px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+      }
+
+      #mailto:hover,
+      #mailto:focus {
+        background-size: 0 1.4px, 100% 1.4px;
+      }
+      .victorKoychev img {
+        margin: -80px auto;
+        max-width: 20%;
+      }
+      .victorKoychev .directChild {
+        display: grid;
+      }
+
+      .about h1 {
+      }
+      .about div {
+        margin: 0 auto;
+        font-size: 20px;
+        color: var(--grey);
+      }
+
+      .card img {
+          max-width: 50px;
+          margin: 0px 10px -13px 0px;
+        }
+
+      blockquote {
+        padding-top: 10.6px;
+        font-size: 15px;
+      }
+      .content a {
+        width: 83px;
+        margin: 0px 2px 15px 3px;
+      }
+      
+      .dots {
+        transform: translateY(140%);
+      }
+      /* #contactMe,
+      #myCV {
+        padding: 37px 0px;
+      }
+      nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+
+      nav a:nth-child(2) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      nav a:nth-child(1) {
+        transform: scale(1.25);
+        grid-column: 2;
+      } */
+      #pc {
+        position: relative;
+      }
+
+      .filter-red {
+        filter: invert(20%) sepia(92%) saturate(1999%) hue-rotate(342deg)
+          brightness(74%) contrast(109%);
+        padding: 20px 15px;
+      }
+      #pc {
+        z-index: 1;
+      }
+      #contactMe,
+      #myCV {
+        text-decoration: none;
+        color: var(--red);
+        float: right;
+        padding: 40px;
+      }
+
+      .underline {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .underline {
+        background: linear-gradient(rgb(32, 33, 36, 0), rgb(32, 33, 36, 0)),
+          linear-gradient(to right, var(--red), var(--red), var(--red));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+      }
+
+      .underline:hover {
+        background-size: 0 3px, 100% 3px;
+      }
+      @media only screen and (max-width: 768px) {
+        #contactMe, #myCV{
+          padding: 37px 0px;
+        }
+        #pc{
+          display: grid;
+          grid-template-columns: 33% 33% 33%;
+          text-align: center;
+        }
+        
+        #pc a:nth-child(2){
+          grid-column: 1;
+          grid-row: 1;
+        }
+        #pc a:nth-child(1) {
+          transform: scale(1.25);
+          grid-column: 2;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        h1 {
+          font-size: 300%;
+        }
+      }
+
+      @media only screen and (max-width: 430px) {
+        h1 {
+          font-size: 200%;
+        }
+      }
+
+
+      @media only screen and (max-width: 395px) {
+        #contactMe,
+      #myCV {
+        padding: 37px 0px;
+      }
+      #pc {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+
+      #pc a:nth-child(2) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      #pc a:nth-child(1) {
+        transform: scale(1.25);
+        grid-column: 2;
+      }
+        h1 {
+          margin-top: 50px;
+          font-size: 160%;
+        }
+        #contactMe,
+        #myCV,
+        .content p {
+          display: none;
+        }
+        #pc {
+          grid-template-columns: 1fr;
+          position: absolute;
+        }
+        #pc a:nth-child(1) {
+          grid-column: 1;
+        }
+        .victorKoychev img {
+          position: relative;
+          top: 100px;
+          max-width: 150px;
+          margin-bottom: -100px;
+        }
+        .victorKoychev blockquote {
+          margin-left: 5%;
+        }
+        .about .directChild div {
+          position: relative;
+          top: 650px;
+        }
+        .about h1 {
+          position: relative;
+          top: 555px;
+        }
+        .about .directChild div {
+          font-size: 70%;
+          margin-top: -250px;
+        }
+        .jobs {
+          padding-top: 550px;
+        }
+        svg {
+          transform: scale(2.5);
+          margin: 30px;
+        }
+
+        .projects {
+          padding-top: 15px;
+        }
+
+        .contactMe {
+          margin-top: -10px;
+        }
+
+        .jobs .content {
+          position: relative;
+          top: 10px;
+          transform: scale(0.9);
+        }
+        .card a {
+          top: -21px;
+          transform: scale(0.7);
+          margin: -18px;
+          right: -0.8px;
+        }
+      }
+
+      .directChild {
+        width: 100%;
+        height: 100%;
+      }
+
+      blockquote {
+        text-align: left;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        font-style: italic;
+        margin: auto;
+        line-height: 1.2;
+        position: relative;
+        color: var(--grey);
+        height: 100px;
+      }
+
+      blockquote:before {
+        display: block;
+        padding-left: 10px;
+        content: "\201C";
+        font-size: 80px;
+        position: absolute;
+        left: -50px;
+        top: -10px;
+        color: #ff0000;
+      }
+      blockquote cite {
+        color: #999999;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+      }
+      blockquote cite:before {
+        content: "\2014 \2009";
+      }
+      .victorKoychev blockquote {
+        margin-top: -50px;
+        max-width: 1000px;
+        position: block;
+      }
+
+      .cardDesc {
+        margin: 30px auto;
+      }
+
+      @media only screen and (max-width: 850px) {
+        .project.card {
+          width: 42%;
+        }
+      }
+      @media only screen and (max-width: 640px) {
+        .project.card {
+          width: 45%;
+        }
+      }
+
+      @media only screen and (max-width: 1240px) {
+        .victorKoychev img {
+          max-width: 23%;
+        }
+      }
+
+      @media only screen and (max-width: 1100px) {
+        .victorKoychev img {
+          max-width: 26%;
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        .victorKoychev img {
+          max-width: 29%;
+        }
+      }
+      @media only screen and (max-width: 730px) {
+        .victorKoychev img {
+          max-width: 35%;
+        }
+        blockquote{
+          font-size: 80%;
+        }
+        blockquote cite:before {
+         font-size: 80%;
+        }
+        blockquote:before {
+         font-size: 500%;
+         top: -6.5px;
+        }
+        
+      }
+      h1 {
+        font-family: "Open Sans";
+        font-style: normal;
+      }
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <div id='pc'style="position: absolute">
+    <a href="#"
+      ><img
+        class="filter-red"
+        src="https://img.icons8.com/ios-filled/50/000000/v-symbol.png"
+    /></a>
+    <a id="myCV" class="underline" tabindex="" href="/CV.pdf" target="_blank">MY CV</a>
+    <a
+      id="contactMe"
+      class="underline"
+      tabindex="-1"
+      href=""
+      >CONTACT ME</a
+    >
+  </div>
+  <div id="main" class="scroll-container">
+    <section
+      class="victorKoychev"
+      style="width: 100%; height: 100%; margin-top: 94px"
+    >
+      <div class="directChild">
+        <h1>VICTOR KOYCHEV</h1>
+        <img src="/me.jpg" alt="" />
+
+        <blockquote>
+          Once you position yourself as a victim, you could never be a
+          victor.<cite>V. Koychev</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="about" style="width: 100%; height: 100vh">
+      <div class="directChild">
+        <h1>ABOUT</h1>
+        <div style="margin: 0 auto; max-width: 700px; padding: 100px">
+          I am currently both working at Telus Interntaional and studying at
+          the Sofia High School of Mathematics, while also pursuing my dream
+          to become a self-employed programmer. To say that my day is crammed
+          from dawn till dusk would probably be an understatement. However, I
+          would never say that I am tired from all of this. Work makes me
+          happy. Purpose makes me powerful. One has no excuses for idling.
+        </div>
+      </div>
+    </section>
+
+    <section class="jobs">
+      <div class="directChild">
+        <h1>JOBS</h1>
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <h3>
+                <img
+                  src="data:image/png;base64,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"
+                />
+                TELUS International
+              </h3>
+
+              <div class="cardDesc">
+                I am currently working at Telus International as a teleagent
+                for "Buchbinder", which is the best German rent-a-car company.
+                My team consists of people who are motivated, highly educated
+                and full of energy and passion for the job. <br />
+                A great experience overall.
+              </div>
+              <div style="margin-top: 25px">
+                <a
+                  href="https://www.telusinternational.com/about"
+                  target="_blank"
+                  >Telus</a
+                >
+                <a href="https://www.buchbinder.de/en/company" target="_blank"
+                  >Buchbinder</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="directChild">
+        <h1>PROJECTS</h1>
+        <div
+          class="projectContainer"
+          style="display: flex; justify-content: center"
+        >
+          <div class="project card">
+            <div class="box">
+              <div class="content">
+                <h3><img src="/vicauto.png" />Vicauto</h3>
+                <div class="cardDesc" style="font-size: 90%">
+                  Vicauto is a full-stack website created to list numerous car offers. It was built using Express JS for the back end. The offers as well as user accounts are stored and used via SQLite.  
+                </div>
+                <a
+                  href="https://vicauto.herokuapp.com/"
+                  target="_blank"
+                  >Vicauto</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project card">
+            <div class="box">
+              <div class="content">
+                <h3><img src="/vicweather.ico" />Vicweather</h3>
+                <div class="cardDesc" style="font-size: 90%">
+                  A website crafted solely by me with the intent of providing customers with information about the weather for all the cities around the world. Built using Vanilla JS and the fetch API.
+                </div>
+                <a
+                  href="https://vicweathersite.herokuapp.com/"
+                  target="_blank"
+                  >Vicweather</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contactMe">
+      <div class="directChild"><h1>CONTACT ME</h1>Send me an email: 
+        <a href="mailto:victorkoycheff@gmail.com" id="mailto">victorkoycheff@gmail.com</a><br> Or... you could also find me on the following social media:
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/victor-koychev-700ba51b4/" target="_blank" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="linkedin" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/viktor.koyche/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></i>
+          </a>
+          <a href="https://www.instagram.com/viksskchv/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <nav id="mobile" aria-label="secondary">
+    <a id="myCV" class="underline" tabindex="" href="/CV.pdf" target="_blank">MY CV</a>
+    <a href="/"
+      ><img
+        class="filter-red"
+        src="/favicon.ico"
+        style="width: 50px;"
+    /></a>
+    <a
+      id="contactMe"
+      class="underline"
+      href="mailto:victorkoycheff@gmail.com"
+      >CONTACT ME</a
+    >
+  </nav>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section
+            class="victorKoychev"
+          >
+            <div class="directChild">
+              <h1>VICTOR KOYCHEV</h1>
+              <img src="/me.jpg" style="max-width: 75%;" alt="" />
+  
+              <blockquote>
+                Once you position yourself as a victim, you could never be a
+                victor.<cite>V. Koychev</cite>
+              </blockquote>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+        
+
+          <section class="about">
+            <div class="directChild">
+              <h1>ABOUT</h1>
+              <div style="width: 80%; margin: auto">
+                I am currently both working at Telus Interntaional and studying at
+                the Sofia High School of Mathematics, while also pursuing my dream
+                to become a self-employed programmer. To say that my day is crammed
+                from dawn till dusk would probably be an understatement. However, I
+                would never say that I am tired from all of this. Work makes me
+                happy. Purpose makes me powerful. One has no excuses for idling.
+              </div>
+            </div>
+          </section>
+  
+  
+        </div>
+        <div class="swiper-slide">
+
+          <section class="jobs">
+            <div class="directChild">
+              <h1>JOBS</h1>
+              <div class="card">
+                <div class="box">
+                  <div class="content">
+                    <h3>
+                      <img
+                        src="data:image/png;base64,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"
+                      />
+                      <br>
+                       TELUS International
+                    </h3>
+    
+                    <div class="cardDesc">
+                      I am currently working at Telus International as a teleagent
+                      for "Buchbinder", which is the best German rent-a-car company.
+                      My team consists of people who are motivated, highly educated
+                      and full of energy and passion for the job. <br />
+                      A great experience overall.
+                    </div>
+                    <div style="margin-top: 25px">
+                      <a
+                        href="https://www.telusinternational.com/about"
+                        target="_blank"
+                        >Telus</a
+                      >
+                      <a href="https://www.buchbinder.de/en/company" target="_blank"
+                        >Buchbinder</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+        </div>
+        <div class="swiper-slide">
+          
+  
+          <section class="projects">
+            <div class="directChild">
+              <h1>PROJECTS</h1>
+              <div
+                class="projectContainer"
+                style="display: flex; justify-content: center"
+              >
+                <div class="project card">
+                  <div class="box" style="height: 330px">
+                    <div class="content">
+                      <h3><img src="/vicauto.png" /><br>Vicauto</h3>
+                      <div class="cardDesc" style="font-size: 90%">
+                        Vicauto is a full-stack website created to list numerous car offers. It was built using Express JS for the back end. The offers as well as user accounts are stored and used via SQLite.  
+                      </div>
+                      <a
+                        href="https://vicauto.herokuapp.com/"
+                        target="_blank"
+                        style="margin-top: 15px;"
+                        >Vicauto</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="project card">
+                  <div class="box" style="height: 330px;">
+                    <div class="content">
+                      <h3><img src="/vicweather.ico" /><br>Vicweather</h3>
+                      <div class="cardDesc" style="font-size: 90%">
+                        A website crafted solely by me with the intent of providing customers with information about the weather for all the cities around the world. Built using Vanilla JS and the fetch API.
+                      </div>
+                      <a
+                        href="https://vicweathersite.herokuapp.com/"
+                        style="margin-top: 15px;"
+                        target="_blank"
+                        >Vicweather</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+  
+        </div>
+        <div class="swiper-slide">
+  
+          <section class="contactMe">
+            <div class="directChild"><h1>CONTACT ME</h1>Send me an email: 
+              <a href="mailto:victorkoycheff@gmail.com" id="mailto">victorkoycheff@gmail.com</a><br> Or... you could also find me on the following social media:
+              <div class="socials">
+                <a href="https://www.linkedin.com/in/victor-koychev-700ba51b4/" target="_blank" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/viktor.koyche/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg></i>
+                </a>
+                <a href="https://www.instagram.com/viksskchv/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+  
+        </div>
+      </div>
+      <div class="swiper-pagination" style="transform: rotate(270deg); left: 50%; right: 50%; top: 80%;"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        direction: 'vertical',
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      }); 
+    </script>
+    <script>
+      </script>
+      <script>
+        const filterRed = document.getElementsByClassName("filter-red")[0];
+        filterRed.onclick = () => {
+          document.getElementsByTagName("img")[0].style.transform =
+            "rotate(0deg)";
+        };
+      </script>
+      <script>
+        const rollsRoyce = (timeout) => {
+          setTimeout(() => {
+            if (window.location.href.split("#")[1] == "victor") {
+              c = 0;
+              document.getElementsByTagName("img")[0].style.transform =
+                "rotate(0deg)";
+            }
+          }, timeout);
+        };
+        let c = 0;
+        const html = document.getElementsByTagName("html")[0];
+        html.onwheel = (e) => {
+          e.deltaY > 0 ? c++ : c--;
+          document.getElementsByTagName("img")[0].style.transform =
+            "rotate(" + c * 72 + "deg)";
+          document.getElementsByTagName("img")[0].style.transition = "0.7s";
+    
+          rollsRoyce(100);
+        };
+        html.onkeydown = (e) => {
+          if (e.keyCode == 40) {
+            // down
+            c--;
+            document.getElementsByTagName("img")[0].style.transform =
+              "rotate(" + c * 72 + "deg)";
+            document.getElementsByTagName("img")[0].style.transition = "0.7s";
+            rollsRoyce(300);
+          }
+          if (e.keyCode == 38) {
+            // up
+            c++;
+            document.getElementsByTagName("img")[0].style.transform =
+              "rotate(" + c * 72 + "deg)";
+            document.getElementsByTagName("img")[0].style.transition = "0.7s";
+            rollsRoyce();
+          }
+        };
+      </script>
+      <script>
+      </script>
+      <script>
+        Array.from(document.querySelectorAll("#pc > a")).forEach((el, i) => {
+          el.onclick = (e) => {
+            e.preventDefault();
+            if (i == 0) {window.location.href = "/index.html#victor"; };
+            if (i == 1) window.open("/CV.pdf", "_blank");
+            if (i == 2) {
+              window.location.href = "/index.html#contactMe";
+            }
+          };
+        });
+        document.querySelectorAll("#pc > a")[0].click();
+    
+      </script>
+    
+      <script>
+        (function () {
+          const dic = {
+            victor: 0,
+            about: 1,
+            jobs: 2,
+            projects: 3,
+            contactMe: 4,
+          };
+          const dic1 = {
+            0: "victor",
+            1: "about",
+            2: "jobs",
+            3: "projects",
+            4: "contactMe",
+          };
+          ("use strict");
+    
+          var fullScroll = function (params) {
+            var main = document.getElementById(params.mainElement);
+    
+            var sections = main.getElementsByTagName("section");
+    
+            var defaults = {
+              container: main,
+              sections: sections,
+              animateTime: params.animateTime || 0.7,
+              animateFunction: params.animateFunction || "ease",
+              maxPosition: sections.length - 1,
+              currentPosition: 0,
+              displayDots:
+                typeof params.displayDots != "undefined"
+                  ? params.displayDots
+                  : true,
+              dotsPosition: params.dotsPosition || "left",
+            };
+    
+            this.defaults = defaults;
+            this.init();
+          };
+    
+          fullScroll.prototype.init = function () {
+            this.buildPublicFunctions().buildSections().buildDots().addEvents();
+    
+            var anchor = location.hash.replace("#", "");
+            if (!anchor) anchor = "victor";
+            location.hash = 0;
+            this.changeCurrentPosition(anchor);
+            this.registerIeTags();
+          };
+    
+          fullScroll.prototype.buildSections = function () {
+            var sections = this.defaults.sections;
+            for (var i = 0; i < sections.length; i++) {
+              sections[i].setAttribute("data-index", i);
+            }
+            return this;
+          };
+    
+          fullScroll.prototype.buildDots = function () {
+            this.ul = document.createElement("ul");
+            this.ul.className = this.updateClass(1, "dots", this.ul.className);
+            this.ul.className = this.updateClass(
+              1,
+              this.defaults.dotsPosition == "right" ? "dots-right" : "dots-left",
+              this.ul.className
+            );
+    
+            var _self = this;
+            var sections = this.defaults.sections;
+    
+            for (var i = 0; i < sections.length; i++) {
+              var li = document.createElement("li");
+              var a = document.createElement("a");
+              var p = document.createElement("p");
+              a.setAttribute("href", "#" + dic1[i]);
+              a.setAttribute("tabindex", -1);
+              p.setAttribute("tabindex", -1);
+              if (i == 0) p.innerText = "Victor".toUpperCase();
+              else {
+                if (i == 4) p.innerText = "Contact Me".toUpperCase();
+                else p.innerText = main.children[i].className.toUpperCase();
+              }
+              a.style.textDecoration = "inherit";
+              a.id = i;
+              li.appendChild(a);
+              li.appendChild(p);
+    
+              _self.ul.appendChild(li);
+            }
+    
+            this.ul.childNodes[0].firstChild.className = this.updateClass(
+              1,
+              "active",
+              this.ul.childNodes[0].firstChild.className
+            );
+    
+            if (this.defaults.displayDots) {
+              document.body.appendChild(this.ul);
+            }
+    
+            return this;
+          };
+    
+          fullScroll.prototype.addEvents = function () {
+            if (document.addEventListener) {
+              document.addEventListener(
+                "mousewheel",
+                this.mouseWheelAndKey,
+                false
+              );
+              document.addEventListener("wheel", this.mouseWheelAndKey, false);
+              document.addEventListener("keyup", this.mouseWheelAndKey, false);
+              document.addEventListener("touchstart", this.touchStart, false);
+              document.addEventListener("touchend", this.touchEnd, false);
+              window.addEventListener("hashchange", this.hashChange, false);
+    
+              if (
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                  navigator.userAgent
+                )
+              ) {
+                if (!("ontouchstart" in window)) {
+                  document.body.style = "overflow: scroll;";
+                  document.documentElement.style = "overflow: scroll;";
+                }
+              }
+            } else {
+              document.attachEvent("onmousewheel", this.mouseWheelAndKey, false);
+              document.attachEvent("onkeyup", this.mouseWheelAndKey, false);
+            }
+    
+            return this;
+          };
+    
+          fullScroll.prototype.buildPublicFunctions = function () {
+            var mTouchStart = 0;
+            var mTouchEnd = 0;
+            var _self = this;
+    
+            this.mouseWheelAndKey = function (event) {
+              if (event.deltaY > 0 || event.keyCode == 40) {
+                _self.defaults.currentPosition++;
+                if (_self.defaults.currentPosition == 5)
+                  _self.defaults.currentPosition = 0;
+                _self.changeCurrentPosition(dic1[_self.defaults.currentPosition]);
+              } else if (event.deltaY < 0 || event.keyCode == 38) {
+                _self.defaults.currentPosition--;
+                if (_self.defaults.currentPosition == -1)
+                  _self.defaults.currentPosition = 4;
+                _self.changeCurrentPosition(dic1[_self.defaults.currentPosition]);
+              }
+              _self.removeEvents();
+            };
+    
+            this.touchStart = function (event) {
+              mTouchStart = parseInt(event.changedTouches[0].clientY);
+              mTouchEnd = 0;
+            };
+    
+            this.touchEnd = function (event) {
+              mTouchEnd = parseInt(event.changedTouches[0].clientY);
+              if (
+                mTouchEnd - mTouchStart > 100 ||
+                mTouchStart - mTouchEnd > 100
+              ) {
+                if (mTouchEnd > mTouchStart) {
+                  _self.defaults.currentPosition--;
+                } else {
+                  _self.defaults.currentPosition++;
+                }
+                _self.changeCurrentPosition(_self.defaults.currentPosition);
+              }
+            };
+            this.hashChange = function (event) {
+              if (location) {
+                var anchor = location.hash.replace("#", "").split("/")[0];
+                anchor = dic[anchor];
+                if (anchor !== "") {
+                  if (anchor < 0) {
+                    _self.changeCurrentPosition(_self.defaults.maxPosition);
+                  } else if (anchor > _self.defaults.maxPosition) {
+                    _self.changeCurrentPosition(0);
+                  } else {
+                    _self.defaults.currentPosition = anchor;
+                    _self.animateScroll();
+                  }
+                }
+              }
+            };
+    
+            this.removeEvents = function () {
+              if (document.addEventListener) {
+                document.removeEventListener(
+                  "mousewheel",
+                  this.mouseWheelAndKey,
+                  false
+                );
+                document.removeEventListener(
+                  "wheel",
+                  this.mouseWheelAndKey,
+                  false
+                );
+                document.removeEventListener(
+                  "keyup",
+                  this.mouseWheelAndKey,
+                  false
+                );
+                document.removeEventListener(
+                  "touchstart",
+                  this.touchStart,
+                  false
+                );
+                document.removeEventListener("touchend", this.touchEnd, false);
+              } else {
+                document.detachEvent(
+                  "onmousewheel",
+                  this.mouseWheelAndKey,
+                  false
+                );
+                document.detachEvent("onkeyup", this.mouseWheelAndKey, false);
+              }
+    
+              setTimeout(function () {
+                _self.addEvents();
+              }, 600);
+            };
+    
+            this.animateScroll = function () {
+              var animateTime = this.defaults.animateTime;
+              var animateFunction = this.defaults.animateFunction;
+              var position = this.defaults.currentPosition * 100;
+    
+              this.defaults.container.style.webkitTransform =
+                "translateY(-" + position + "%)";
+              this.defaults.container.style.mozTransform =
+                "translateY(-" + position + "%)";
+              this.defaults.container.style.msTransform =
+                "translateY(-" + position + "%)";
+              this.defaults.container.style.transform =
+                "translateY(-" + position + "%)";
+              this.defaults.container.style.webkitTransition =
+                "all " + animateTime + "s " + animateFunction;
+              this.defaults.container.style.mozTransition =
+                "all " + animateTime + "s " + animateFunction;
+              this.defaults.container.style.msTransition =
+                "all " + animateTime + "s " + animateFunction;
+              this.defaults.container.style.transition =
+                "all " + animateTime + "s " + animateFunction;
+    
+              for (var i = 0; i < this.ul.childNodes.length; i++) {
+                this.ul.childNodes[i].firstChild.className = this.updateClass(
+                  2,
+                  "active",
+                  this.ul.childNodes[i].firstChild.className
+                );
+                if (i == this.defaults.currentPosition) {
+                  this.ul.childNodes[i].firstChild.className = this.updateClass(
+                    1,
+                    "active",
+                    this.ul.childNodes[i].firstChild.className
+                  );
+                }
+              }
+            };
+    
+            this.changeCurrentPosition = function (position) {
+              if (position !== "") {
+                _self.defaults.currentPosition = position;
+                location.hash = _self.defaults.currentPosition;
+              }
+            };
+    
+            this.registerIeTags = function () {
+              document.createElement("section");
+            };
+    
+            this.updateClass = function (type, newClass, currentClass) {
+              if (type == 1) {
+                return (currentClass += " " + newClass);
+              } else if (type == 2) {
+                return currentClass.replace(newClass, "");
+              }
+            };
+    
+            return this;
+          };
+          window.fullScroll = fullScroll;
+        })();
+    
+        new fullScroll({
+          mainElement: "main",
+          displayDots: true,
+          dotsPosition: "left",
+          animateTime: 0.7,
+          animateFunction: "ease",
+        });
+        const dic1 = {
+          0: "victor",
+          1: "about",
+          2: "jobs",
+          3: "projects",
+          4: "contactMe",
+        };
+        Array.from(document.getElementsByTagName("p")).forEach((el, i) => {
+          el.addEventListener(
+            "click",
+            () => (
+              rollsRoyce(), (window.location.href = "/index.html#" + dic1[i])
+            )
+          );
+        });
+      </script>
+      <script>
+        document.getElementsByTagName('ul')[0].children[4].children[0].click()
+        document.getElementsByTagName('ul')[0].children[0].children[0].click()
+      </script>
+  </body>
+</html>
